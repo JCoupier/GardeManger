@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="array_scale_type_options">
+        <item>@string/scale_type_numeric</item>
+        <item>@string/scale_type_custom</item>
+    </string-array>
+</resources>

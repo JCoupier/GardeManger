@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.android.garde_manger">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/garde_manger_icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CourseActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".StorageActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".EditorActivity"
+            android:parentActivityName=".StorageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EditorTheme">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".StorageActivity" />
+        </activity>
+        <activity
+            android:name=".RecetteActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".RecetteEditorActivity"
+            android:parentActivityName=".RecetteActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EditorTheme">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".RecetteActivity" />
+        </activity>
+        <activity android:name=".IngredientActivity"
+            android:parentActivityName=".RecetteEditorActivity"
+            android:theme="@style/EditorTheme"/>
+
+        <provider
+            android:name=".data.FoodProvider"
+            android:authorities="com.example.android.garde_manger"
+            android:exported="false" />
+    </application>
+
+</manifest>

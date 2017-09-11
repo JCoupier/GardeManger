@@ -1,0 +1,16 @@
+<resources>
+    <dimen name="activity_margin">16dp</dimen>
+    <dimen name="thumbnail_width">100dp</dimen>
+    <dimen name="thumbnail_height">100dp</dimen>
+    <dimen name="editor_plant_picture_width_height">150dp</dimen>
+    <dimen name="activity_padding">8dp</dimen>
+    <dimen name="activity_padding_top">10dp</dimen>
+    <dimen name="activity_padding_bottom">11dp</dimen>
+    <dimen name="edit_quantity_padding">36dp</dimen>
+    <dimen name="editor_button_text_size">18sp</dimen>
+    <dimen name="editor_quantity_text_size">26sp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="recycler_bottom_margin">80dp</dimen>
+    <dimen name="tab_width">95dp</dimen>
+</resources>
+

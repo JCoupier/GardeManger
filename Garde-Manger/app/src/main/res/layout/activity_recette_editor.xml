@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbarStyle="insideOverlay"
+    tools:context="com.example.android.garde_manger.EditorActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_margin">
+
+            <LinearLayout
+                android:id="@+id/edit_overview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="@dimen/activity_padding">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        style="@style/CategoryStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/activity_margin"
+                        android:text="@string/name" />
+
+                    <EditText
+                        android:id="@+id/edit_recette_name"
+                        style="@style/EditorFieldStyle"
+                        android:hint="@string/hint_name"
+                        android:inputType="textCapWords" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/colorAccentDark" />
+
+                <TextView
+                    style="@style/CategoryStyle"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fruits_et_legumes" />
+
+                <TextView
+                    android:id="@+id/ingredient_fruitleg_text_view"
+                    style="@style/CategoryStyle"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="14sp"
+                    tools:text="Ingredients" />
+
+                <Button
+                    android:id="@+id/select_fruitleg_button"
+                    style="@style/EditorButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/activity_margin"
+                    android:padding="@dimen/activity_padding"
+                    android:text="@string/select_ingredient" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/colorAccentDark" />
+
+                <TextView
+                    style="@style/CategoryStyle"
+                    android:layout_height="wrap_content"
+                    android:text="@string/frigo" />
+
+                <TextView
+                    android:id="@+id/ingredient_frigo_text_view"
+                    style="@style/CategoryStyle"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="14sp"
+                    tools:text="Ingredients" />
+
+                <Button
+                    android:id="@+id/select_frigo_button"
+                    style="@style/EditorButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/activity_margin"
+                    android:padding="@dimen/activity_padding"
+                    android:text="@string/select_ingredient" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/colorAccentDark" />
+
+                <TextView
+                    style="@style/CategoryStyle"
+                    android:layout_height="wrap_content"
+                    android:text="@string/congelo" />
+
+                <TextView
+                    android:id="@+id/ingredient_congelo_text_view"
+                    style="@style/CategoryStyle"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="14sp"
+                    tools:text="Ingredients" />
+
+                <Button
+                    android:id="@+id/select_congelo_button"
+                    style="@style/EditorButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/activity_margin"
+                    android:padding="@dimen/activity_padding"
+                    android:text="@string/select_ingredient" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/colorAccentDark" />
+
+                <TextView
+                    style="@style/CategoryStyle"
+                    android:layout_height="wrap_content"
+                    android:text="@string/placards" />
+
+                <TextView
+                    android:id="@+id/ingredient_placards_text_view"
+                    style="@style/CategoryStyle"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="14sp"
+                    tools:text="Ingredients" />
+
+                <Button
+                    android:id="@+id/select_placards_button"
+                    style="@style/EditorButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/activity_margin"
+                    android:padding="@dimen/activity_padding"
+                    android:text="@string/select_ingredient" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/colorAccentDark" />
+
+                <TextView
+                    style="@style/CategoryStyle"
+                    android:layout_height="wrap_content"
+                    android:text="@string/epices" />
+
+                <TextView
+                    android:id="@+id/ingredient_epices_text_view"
+                    style="@style/CategoryStyle"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="14sp"
+                    tools:text="Ingredients" />
+
+                <Button
+                    android:id="@+id/select_epices_button"
+                    style="@style/EditorButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/activity_margin"
+                    android:padding="@dimen/activity_padding"
+                    android:text="@string/select_ingredient" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</ScrollView>
