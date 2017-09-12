@@ -274,7 +274,7 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
 
                 // If the quantity in mL is not provided put Unknown in the database
                 if (TextUtils.isEmpty(expDateString)) {
-                    expDateString = "Unknown";
+                    expDateString = "NA";
                     values.put(FruitsLegumesEntry.COLUMN_EXPIRY_DATE, expDateString);
                 } else {
                     values.put(FruitsLegumesEntry.COLUMN_EXPIRY_DATE, expDateString);
@@ -354,7 +354,7 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
 
                 // If the quantity in mL is not provided put Not provided in the database
                 if (TextUtils.isEmpty(expDateString)) {
-                    expDateString = "Unknown";
+                    expDateString = "NA";
                     values.put(FrigoEntry.COLUMN_EXPIRY_DATE, expDateString);
                 } else {
                     values.put(FrigoEntry.COLUMN_EXPIRY_DATE, expDateString);
@@ -431,7 +431,7 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
 
                 // If the quantity in mL is not provided put Not provided in the database
                 if (TextUtils.isEmpty(expDateString)) {
-                    expDateString = "Unknown";
+                    expDateString = "NA";
                     values.put(CongeloEntry.COLUMN_EXPIRY_DATE, expDateString);
                 } else {
                     values.put(CongeloEntry.COLUMN_EXPIRY_DATE, expDateString);
@@ -508,7 +508,7 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
 
                 // If the quantity in mL is not provided put Not provided in the database
                 if (TextUtils.isEmpty(expDateString)) {
-                    expDateString = "Unknown";
+                    expDateString = "NA";
                     values.put(PlacardsEntry.COLUMN_EXPIRY_DATE, expDateString);
                 } else {
                     values.put(PlacardsEntry.COLUMN_EXPIRY_DATE, expDateString);
@@ -585,7 +585,7 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
 
                 // If the quantity in mL is not provided put Not provided in the database
                 if (TextUtils.isEmpty(expDateString)) {
-                    expDateString = "Unknown";
+                    expDateString = "NA";
                     values.put(EpicesEntry.COLUMN_EXPIRY_DATE, expDateString);
                 } else {
                     values.put(EpicesEntry.COLUMN_EXPIRY_DATE, expDateString);
@@ -640,6 +640,13 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
             Toast.makeText(this, getString(R.string.already_in_shopping_list), Toast.LENGTH_SHORT).show();
         } else {
 
+            // Check if this is supposed to be a new food
+            // and check if all the fields in the editor are blank
+            if (mCurrentFoodUri == null) {
+                Toast.makeText(this, getString(R.string.editor_add_new_to_list), Toast.LENGTH_SHORT).show();
+                return;
+            }
+
             mIsInCourseList = FruitsLegumesEntry.IS_IN_LIST;
 
             // Create a ContentValues object where column names are the keys,
@@ -650,13 +657,6 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
             // Use trim to eliminate leading or trailing white space
             String nameString = mNameEditText.getText().toString().trim();
             String quantityString = mAddCourseQuantityEditText.getText().toString().trim();
-
-            // Check if this is supposed to be a new food
-            // and check if all the fields in the editor are blank
-            if (mCurrentFoodUri == null) {
-                Toast.makeText(this, getString(R.string.editor_add_new_to_list), Toast.LENGTH_SHORT).show();
-                return;
-            }
 
             // Inform the user that the name must be filled
             if (TextUtils.isEmpty(nameString)) {
